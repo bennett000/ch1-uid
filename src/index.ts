@@ -1,2 +1,2 @@
 export * from './interfaces';
-export { Xhr } from './xhr';
+export { createUid } from './uid';
