@@ -1,5 +1,10 @@
 # CHANGE LOG
 
+## 1.0.0
+
+- prefixes are now mandatory to avoid ids starting with numeric values
+- dates now precede instance ids in the order
+
 ## 0.3.0
 
 - Package as CJS and ES6 modules

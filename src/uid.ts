@@ -7,7 +7,7 @@ export function createUid(
   const id = Math.floor(random() * entropyMax).toString(32);
   let rollover = 0;
 
-  return (prefix = '') => {
+  return (prefix = 'uuid') => {
     const date = now().toString(32);
     const e = Math.floor(random() * entropyMax).toString(32);
 
@@ -17,8 +17,6 @@ export function createUid(
       rollover += 1;
     }
 
-    return prefix
-      ? `${prefix}-${id}-${date}-${rollover.toString(32)}-${e}`
-      : `${id}-${date}-${rollover.toString(32)}-${e}`;
+    return `${prefix}-${date}-${id}-${rollover.toString(32)}-${e}`;
   };
 }
